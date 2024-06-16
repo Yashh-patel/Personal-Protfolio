@@ -48,7 +48,7 @@ This portfolio website provides an overview of my professional journey, includin
 - `images/`: Directory for images
 
 ## Contact
-For any inquiries, please contact me at yashh.patel@example.com.
+For any inquiries, please contact me at yp344822@gmail.com.
 
 ---
 
