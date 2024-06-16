@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+html {
+    background-color: lightskyblue;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    color: black;
+    font-size: 10px;
+}
+
+/* STEP 1a: We need to allow the page BODY element to grow and shrink a bit more - change the below to a min-width of 640px and a max-width of 1280px */
+body {
+    margin: 0 auto;
+    min-width: 640px; /* Change to 640px */
+    max-width: 1280px; /* Change to 1280px */
+}
+
+header {
+    font-size: 1.8rem;
+}
+header img {
+    float: left;
+}
+
+header h1,
+header h2 {
+    text-align: right;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+header h2 {
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+header nav li {
+    display: inline-block;
+}
+
+header nav a {
+    display: block;
+}
+
+header nav ul li {
+    position: relative;
+}
+
+header nav ul ul {
+    position: absolute;
+    left: -9999px;
+    background-color: white;
+    width: 15em;
+    z-index: 1;
+    border: 3px solid black;
+}
+
+header nav ul ul li {
+    display: block;
+}
+
+header nav li:hover ul {
+        left: auto;
+}
+
+header nav a:link {
+    padding: 0.5em;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+header nav a:visited {
+    color: grey;
+}
+
+header nav a:focus {
+    background-color: orange;
+}
+
+header nav a:hover {
+    background-color: grey;
+    color: white;
+}
+
+header nav a:active {
+    background-color: yellow;
+    color: red;
+}
+
+main {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    text-align: justify;
+    background-color: white;
+    display: flex;
+    /* STEP 1b: We need to design the layout so that we start with assuming the visitor is using a small screen (mobile-first) - as such, we will change flex direction for the children of the MAIN element to display in a column, rather than a row */
+    flex-direction: column; /* Change to column */
+}
+
+main section {
+    /* STEP 2a: Change the SECTION element inside the MAIN to stretch across the whole page, by removing the width setting - it will then default to full-width */
+    width: 60%; /* Set to 60% */
+    padding: 2em;
+}
+
+main section time {
+    font-style: italic;
+}
+
+main aside {
+    /* STEP 2b: We will also remove the width setting for the ASIDE element so that it also stretches across the screen all the way */
+    width: 40%; /* Set to 40% */
+
+    /* STEP 2c: Add padding to all sides of the ASIDE (left side is currently set to zero) */
+    padding: 2em 2em 2em 0; /* Change padding-left to 0 */
+}
+
+/* STEP 3: Add a media query to restore the 2-column layout we originally had when the screen is at least 960 pixels */
+@media screen and (min-width: 960px) {
+    /* STEP 4: INSIDE the newly-created @media rule, add a rule for the MAIN element that restores the flex-box to flex-direction: row */
+    main {
+        flex-direction: row; /* Restore to row */
+    }
+
+    /* STEP 5a: Continue inside the above @media rule, to add a rule for MAIN SECTION that sets the flex-basis to 60% */
+    main section {
+        flex-basis: 60%; /* Set to 60% */
+    }
+
+    /* STEP 5b: Add another rule for MAIN ASIDE, that restores the width to 40%, and the padding-left to 0 - try it out - your layout is now RESPONSIVE (to some degree)! What other parts of the layout should change to adapt to the user's screen size? */
+    main aside {
+        width: 40%; /* Set to 40% */
+        padding-left: 0; /* Remove padding-left */
+    }
+}
+
+aside img[alt$="block"] {
+    position: relative;
+    left: -2rem;
+}
+
+.new-feature {
+    padding-left: 25px;
+    background-image: url("../images/new.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+#emailAddress {
+    font-weight: bold;
+}
+
+[rel="external"] {
+    padding-right: 20px;
+    background-image: url("../images/extlink.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+/* Thank you to 'pnx' at https://openclipart.org/detail/202731/external-link-icon for the very cool external link icon */
+
+main a {
+    text-decoration: none;
+    color: lightskyblue;
+    font-weight: bold;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+blockquote::first-letter {
+    font-size: 2em;
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+footer p {
+    text-align: right;
+}
+
+section > p {
+    text-indent: 2em;
+}
+
+h1, h2, footer {
+    color: white;
+}
+
+/* Styles to arrange image gallery links horizontally with no list markers */
+#blockGallery {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#blockGallery li {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+#blockCaption {
+    text-indent: 0;
+    text-align: left;
+}

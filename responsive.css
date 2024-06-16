@@ -1,0 +1,100 @@
+@media only screen and (max-width: 700px) {
+    .hero{
+        height: 100vh;
+        /* border: 2px solid red; */
+        /* justify-content: space-between; */
+        /* align-items: center; */
+    }
+    .logo h1{
+        font-size: 2.8vw;
+    }
+    nav h2{
+        display: none;
+    }
+    nav button{
+        font-size: 4vw;
+    }
+    .heroContainer{
+        flex-direction: column;
+        align-items: start;
+        
+    }
+    .about{
+        /* display: none; */
+        width: 60%;
+        font-size: 4vw;
+    }
+    .dev div h1{
+        font-size: 15vw;
+    }
+    .footers{
+        justify-content: space-between;
+        margin-top: 22vw;     
+    }
+    .contact{
+       display: flex;
+       gap: 4vw;
+    }
+    .footers p{
+        display: none;
+    }
+    .contact a i{
+        font-size: 8vw;
+    }
+    section{
+        height: fit-content;
+    }
+    #skills{
+        height: 70vh;
+        /* justify-content: space-evenly; */
+        /* margin-top: 5vw; */
+    }
+    .skillsHead div h4{
+        font-size: 8vw;
+    }
+    .skillsHead div h5{
+        font-size: 5vw;
+    }
+    .development p{
+        font-size: 6vw;
+        margin-top: 5vw;
+    }
+    .development div{
+        flex-wrap: wrap ;
+        margin-top:5vw ;
+    }
+    .development div img{
+        width: 15vw;
+    }
+    aside{
+        height: 60vh;
+    }
+    aside h5{
+        font-size: 10vw;
+    }
+    aside p{
+        font-size: 6vw;
+        width: 100%;
+        margin-top: 5vw ;
+    }
+    .projects div h2{
+        font-size: 8vw;
+    }
+    .projects div h3{
+        font-size: 4vw;
+    }
+    .elem h3{
+        font-size: 5vw;
+        margin: 4vw 0;
+    }
+    section a{
+        font-size: 5vw;
+        margin-top: 4vw;
+    }
+    #contact h6{
+        font-size: 14vw;
+    }
+    .overlays{
+        margin-top: 8vw;
+    }
+}
